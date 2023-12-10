@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrastyle %}
+    {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <h2>Bottle Quantity: {{ bottle_quantity }}</h2>
+        <h2>Current Orders: {{ current_orders.count }}</h2>
+        <h2>Completed Orders: {{ completed_orders.count }}</h2>
+        <h2>Busy Employees: {{ busy_employees.count }}</h2>
+        <h2>Free Employees: {{ free_employees.count }}</h2>
+        <h2>Clients: {{ clients.count }}</h2>
+        <h2>Daily Revenue: {{ daily_revenue }}</h2>
+        <h2>Weekly Revenue: {{ weekly_revenue }}</h2>
+        <h2>Monthly Revenue: {{ monthly_revenue }}</h2>
+
+    </div>
+{% endblock %}
